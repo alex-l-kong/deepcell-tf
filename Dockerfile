@@ -8,6 +8,7 @@ FROM tensorflow/tensorflow:${TF_VERSION}-py3
 # System maintenance
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     python3-tk \
+    git \
     libsm6 && \
     rm -rf /var/lib/apt/lists/* && \
     /usr/local/bin/pip install --upgrade pip
